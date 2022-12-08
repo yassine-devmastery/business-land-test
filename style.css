@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #192440;
+    --secondary-color: #00ffad;
+    --tertiary-color: #292b2c;
+    --quaternary-color: #ffffff;
+}
+
+html {
+    font-size: 10px;
+    font-family: Ubuntu, sans-serif;
+    line-height: 1.5;
+}
+
+/* Write your code below */
+
+/* Banner start */
+
+#banner {
+    background-image: url(./images/banner-bg-image.jpg);
+    background-size: cover;
+    padding: 64px 0;
+    color: var(--quaternary-color);
+}
+
+#banner p {
+    margin: 24px 0;
+    font-size: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header img {
+    max-width: 80px;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--quaternary-color);
+    font-size: 2rem;
+}
+
+#banner h1 {
+    opacity: 0;
+    animation-name: opacity_h1;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes opacity_h1 {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Banner end */
+
+/* Protection start */
+.protection {
+    text-align: center;
+}
+
+.protection h2 {
+    margin: 48px 0;
+}
+
+.protection .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.protection .cards .card {
+    max-width: 280px;
+}
+
+.protection h4 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+/* Protection end */
+
+/* Features start */
+.features {
+    margin-top: 70px;
+}
+
+
+.features .feature {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 45px;
+    padding-top: 45px;
+}
+
+.feature-1-wrapper {
+    background-image: linear-gradient(to bottom right,var(--quaternary-color) 0% 50%,var(--secondary-color) 50% 100%);
+}
+
+.feature-2-wrapper {
+    background-color: var(--secondary-color);
+}
+
+.feature img {
+    max-width: 50%;
+}
+
+@media not (min-width: 992px) {
+    .feature-1-wrapper {
+        background-image: none;
+        background-color: var(--secondary-color);
+    }
+    .features .feature {
+        flex-direction: column;
+    }
+    .feature-2 img {
+        order: 1;
+    }
+
+}
+/* Features end */
+
+/* Pricing start */
+
+.pricing {
+    text-align: center;
+}
+
+.pricing h2  {
+    margin: 48px 0;
+}
+
+.pricing .cards {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pricing .card {
+    border-radius: 5px;
+    padding: 24px 15px;
+    width: 100%;
+    max-width: 300px;
+    background: lightgray;
+}
+
+.pricing .card.dark {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
+.pricing h4 {
+    font-size: 2.4rem;
+}
+
+.pricing p  {
+    padding: 5px 0;
+}
+
+.pricing span  {
+    font-size: 9rem;
+}
+
+/* Pricing end */
+
+/* Partners start */
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/* Partners end */
+
+/* Contact start */
+#contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.contact-info, .contact-form {
+    flex-grow: 1;
+}
+.list-unstyled {
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+.first-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px 30px;
+}
+
+.first-row .form-group {
+    flex-grow: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 16px;
+}
+
+#contact {
+    background-image: url('./images/contact-bg-image.jpg');
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.contact-info {
+    color: white;
+}
+
+#contact label {
+    color: var(--secondary-color);
+}
+
+input, textarea {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: var(--quaternary-color);
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+/* Contact end */
+
+/* Footer start */
+footer {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+    padding: 32px 48px;
+    font-size: 16px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#social-media {
+    display: flex;
+    gap: 20px;
+}
+
+#social-media a {
+    background-color: var(--quaternary-color);
+    color: var(--primary-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+@media not (min-width: 768px) {
+    footer .container {
+        flex-direction: column;
+    }
+}
+
+/* Footer end */
+
+/* Buttons start */
+.btn {
+    border: 2px solid transparent;
+    padding: 15px 30px;
+    margin: 24px 0;
+    font-size: 16px;
+    border-radius: 22px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--quaternary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-outline-secondary {
+    border-color: var(--secondary-color);
+    color: var(--secondary-color);
+    background-color: transparent;
+}
+/* Buttons end */
+
+
+
+/* Write your code above */
+
+h1 {
+    font-size: 7.2rem;
+    margin: 4.8rem 0;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 4.5rem;
+}
+
+p, li, label {
+    font-size: 1.6rem;
+}
+
+.font-weight-bold {
+    font-weight: 700;
+}
+
+.font-weight-light {
+    font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
